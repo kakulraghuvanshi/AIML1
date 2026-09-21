@@ -1,95 +1,105 @@
-// Class without a constructor
-class A {
-    name = "Kakul";
+console.log("=====Variables=====");
 
-    show() {
-        console.log("My name is " + this.name);
-    }
+var text = "Kakul Raghuvanshi";
+console.log(text);
+
+
+
+
+
+console.log("\n===== If Else =====");
+
+var a = 40;
+var b = 30;
+
+if(a<b){
+    console.log("A is greater, value of A = ",a);
+}
+else{
+    console.log("B is greater, value of B = ",b)
 }
 
-let obj = new A();
-obj.show();
 
-// Class with a constructor
-class AA {
-    constructor(name) {
-        this.name = name;
-        console.log("My name is " + this.name);
-    }
+
+
+
+
+
+console.log("\n===== Function =====");
+function abes(){
+    console.log("Welcome Students");
+    console.log("Welcome to Node.js");
+}
+abes();
+abes();
+
+
+
+
+
+
+console.log("\n===== Function with Parameters =====");
+
+function greet(fname, lname){
+    console.log("Hello", fname, lname);
 }
 
-let obj1 = new AA("Prabal");
+greet("Utkarsh", "Dixit");
+greet("Waseem", "Sir");
 
-// Class without a constructor
-class Hello2 {
-    faculty = "Utkarsh";
+
+
+
+
+console.log("\n===== Function Return =====");
+
+function add(x, y){
+    return x + y;
 }
 
-let h2 = new Hello2();
-console.log(h2.faculty);
+var result = add(20, 30);
 
-// Student class with a constructor
-class Student {
-    constructor(name, roll, address, mobileNumber) {
-        this.name = name;
-        this.roll = roll;
-        this.address = address;
-        this.mobileNumber = mobileNumber;
+console.log("Sum = ",result);
 
-        console.log("My name is " + this.name);
-        console.log("My roll number is " + this.roll);
-        console.log("My address is " + this.address);
-        console.log("My mobile number is " + this.mobileNumber);
-    }
+
+
+
+
+
+
+console.log("\n===== Default Arguments =====");
+
+function fullName(fname = "ABES", lname = "Engineering College"){
+    return fname + " " + lname;
 }
 
-let s1 = new Student("Kakul", 101, "Muzaffarnagar", 1234567890);
-let s2 = new Student("Prabal", 102, "Muzaffarnagar", 1234556789);
-let s3 = new Student("Utkarsh", 103, "Ghaziabad", 1234567890);
-let s4 = new Student("Tanishq", 104, "Muzaffarnagar", 1234567890);
-let s5 = new Student("Manit", 105, "Ghaziabad", 1234567890);
+console.log(fullName());
 
-console.log(s1);
-console.log(s2);
-console.log(s3);
-console.log(s4);
-console.log(s5);
+console.log(fullName("Utkarsh", "Dixit"));
 
 
 
-//static property and method
-class Hello3{
-    static name = "Example of static variable and method";
-    static show(){
-        console.log("Hello class this is "+Hello3.name);
-    }
+
+
+
+
+console.log("\n===== Percentage =====");
+
+function totalMarks(math, english, science){
+    return math + english + science;
 }
-Hello3.show();
 
-
-//static method
-class Hello5{
-    static name="Example of static method with instance variable";
-    constructor(){
-        this.instanceVar="Instance variable";
-    }
-    show(){
-        console.log("Static Variable: "+Hello5.name);
-        console.log("Instance Variable: "+this.instanceVar);
-    }
+function percentage(total){
+    return (total/300)*100;
 }
-let h5=new Hello5();
-h5.show();
+
+var total = totalMarks(100, 90, 95);
+var percentvalue = percentage(total);
+console.log("Total Marks = ", total);
+console.log("Percentage = ", percentage(total) + "%");
 
 
-class student2{
-    static name="Kakul";
-    static lastName="Raghuvanshi";
-    show(){
-        console.log(`firstname: ${student2.name}`);
-        console.log(`lastname: ${student2.lastName}`);
 
-    }
-}
-let s=new student2();
-s.show();
+
+
+
